@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, Button } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SettingsScreen(props) {
   const { navigation } = props;
@@ -8,7 +9,7 @@ export default function SettingsScreen(props) {
     navigation.navigate(pageName);
   };
   return (
-    <View>
+    <SafeAreaView>
       <Text> Estamos en SettingsScreen </Text>
       <Text> Estamos en SettingsScreen </Text>
       <Text> Estamos en SettingsScreen </Text>
@@ -19,6 +20,6 @@ export default function SettingsScreen(props) {
       <Text> Estamos en SettingsScreen </Text>
       <Text> Estamos en SettingsScreen </Text>
       <Button onPress={() => goToPage("Home")} title="Home" />
-    </View>
+    </SafeAreaView>
   );
 }
